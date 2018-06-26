@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Map vs forEach</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <script>
+    var someArr = [1, 23, 4, 5];
+
+    // the immutable way using map 
+    // returns a modified copy of the array 
+    var newArr = someArr.map(num => num + 1);
+    console.log("old: ", someArr, " new: ", newArr);
+
+    // the mutable way using forEach
+    // Only loops over the array
+    var newArr = [];
+    someArr.forEach(num => newArr.push(num + 1));   
+    console.log("old: ", someArr, " new: ", newArr);
+  </script>
+</body>
+</html>
+
